@@ -1,15 +1,17 @@
 import { TestBed, inject } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
 
-import { NgxobjectmanagerService } from './ngxobjectmanager.service';
+import { ObjectmanagerService } from './ngxobjectmanager.service';
 
 describe('NgxobjectmanagerService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [NgxobjectmanagerService]
+      imports: [HttpClientModule],
+      providers: [ObjectmanagerService]
     });
   });
 
-  it('should be created', inject([NgxobjectmanagerService], (service: NgxobjectmanagerService) => {
+  it('should be created', inject([ObjectmanagerService], (service: ObjectmanagerService) => {
     expect(service).toBeTruthy();
   }));
 });
