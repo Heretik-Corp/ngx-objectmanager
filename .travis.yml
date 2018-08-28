@@ -3,8 +3,17 @@ addons:
   chrome: stable
 language: node_js
 node_js:
-  - node
+- node
 script:
-  - npm run test-ci
-  - npm run build-ci
-
+- npm run test-ci
+- npm run build-ci
+before_deploy:
+  - cd dist/ngxobjectmanager
+deploy:
+  provider: npm
+  email: smiles2424@gmail.com
+  api_key:
+    secure: 1gSE0vyWpy3rsEnvjHu5jU6TIxiz3EGYKJuE+5vWAFFh9S0kQDIgf+Tqnwgs7CH0lgyA6Hj8GszXFwkkBGNnmAGApz7tduTMcV6zwuQNlZx1jX5aaKX4sDXxnWSSGjuJBK3hfPgwgTHKoxGJy0Wv9B2/rA5z/8UprLb3410uZgbKQnGw3AtXn1HNHS3KUG0CyWT36KL86NInqBwDnzmct2JsO1An5ijLMXDcp2d/pXZG9k2CH4hQhVLqDq56U1OYmcdUaQ4V25IQ/s/oK3gQYI/klsHBn7+qaCSzeDhvrfE2EHs3AC2wPT8ZySFC5SWYIbTGgiHGNWCJG0OyPFEvJ4DZZa6nWOt4PtWFjnTC0O9UdI2AxCPTBzzqMFbgGMslfajA7EljXUYwmyTf9nIVEmrbqyIHUKzV5d1lVOdXxFdQBEppEdi9gO/ijYm+rg06H88VDHi6D+KzyGVDQ0ulR6CgEaIz/df2PqMRVPtHcHEIJ5fyXMduInWgELYU6Syc5Biok5nOo9wJayOiXxFke1RCEs9oJN7N39gX6Gnaz8xVlyU1+Bl8pdakIzCk8kRNZ5y2vEF2PQE3jS2nvNAAWGNEENEgGV5hvKDBUTQVg68tWLja330fVKvK2aHIAgE3eI3yLJ82jIz4H10LG2RM3VE+ZBvoPD/uXjPVqj6uRog=
+  on:
+    tags: true
+    repo: Heretik-Corp/ngx-objectmanager
