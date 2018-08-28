@@ -1,5 +1,5 @@
 {
-  "name": "ngx-objectmanager",
+  "name": "@heretik/ngx-objectmanager",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
