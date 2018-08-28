@@ -3,86 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-objectmanager": {
-      "root": "",
-      "sourceRoot": "src",
+    "ngxobjectmanager": {
+      "root": "projects/ngxobjectmanager",
+      "sourceRoot": "projects/ngxobjectmanager/src",
       "projectType": "library",
-      "prefix": "",
-      "schematics": {},
+      "prefix": "h",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "outputPath": "dist/ngx-objectmanager",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "tsConfig": "src/tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+            "tsConfig": "projects/ngxobjectmanager/tsconfig.lib.json",
+            "project": "projects/ngxobjectmanager/ng-package.json"
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "project": "projects/ngxobjectmanager/ng-package.prod.json"
             }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "ngx-objectmanager:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "ngx-objectmanager:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "ngx-objectmanager:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "src/karma.conf.js",
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": [],
-            "assets": [
-            ]
+            "main": "projects/ngxobjectmanager/src/test.ts",
+            "tsConfig": "projects/ngxobjectmanager/tsconfig.spec.json",
+            "karmaConfig": "projects/ngxobjectmanager/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
+              "projects/ngxobjectmanager/tsconfig.lib.json",
+              "projects/ngxobjectmanager/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

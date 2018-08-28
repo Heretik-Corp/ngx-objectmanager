@@ -19,9 +19,11 @@
     ],
     "paths": {
       "ngxobjectmanager": [
+        "dist/ngxobjectmanager",
         "dist/ngxobjectmanager"
       ],
       "ngxobjectmanager/*": [
+        "dist/ngxobjectmanager/*",
         "dist/ngxobjectmanager/*"
       ]
     }
