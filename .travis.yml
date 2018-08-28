@@ -8,8 +8,6 @@ script:
 - npm run test-ci
 - npm run build-ci
 before_deploy:
-  - pwd
-  - 
   - cd dist/ngxobjectmanager
 deploy:
   provider: npm
