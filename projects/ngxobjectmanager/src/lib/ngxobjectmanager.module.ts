@@ -1,10 +1,15 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { ObjectmanagerService } from './ngxobjectmanager.service';
 
 @NgModule({
-  imports: [
-  ],
-  providers: [ObjectmanagerService],
+  imports: [],
   exports: []
 })
-export class NgxobjectmanagerModule { }
+export class NgxobjectmanagerModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: NgxobjectmanagerModule,
+      providers: [ObjectmanagerService]
+    };
+  }
+}
