@@ -5,7 +5,9 @@ export interface Data {
     resultCount: number;
     totalResultCount: number;
     currentStartIndex: number;
-    dataResults: DataResult;
+    previousPage: string;
+    nextPage: string;
+    dataResults: DataResult[];
 }
 
 export interface Permission {
@@ -76,12 +78,12 @@ export interface QueryParameters {
     artifactTypeId: number;
     start: number;
     length: number;
-    includePermissions?: boolean;
-    queryToken?: string;
+    includePermissions: number[];
+    queryToken: string;
 }
 export interface Query {
-    fields?: string[];
-    condition?: string;
-    sorts?: string[];
+    fields: string[];
+    condition: string;
+    sorts: string[];
 }
 
