@@ -20,7 +20,7 @@
 
 ## To Publish 
 
-1. Be an admin
+1. Be an admin or talk to one
 2. `cd` into `projects/ngxobjectmanager`
 3. Run `npm version (major|minor|path)`
 4. Run `git push --follow-tags`
