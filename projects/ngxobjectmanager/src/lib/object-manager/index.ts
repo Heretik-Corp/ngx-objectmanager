@@ -1,3 +1,5 @@
+export * from './ngxobjectmanager.service';
+
 export interface Data {
     workspaceId: number;
     artifactTypeId: number;

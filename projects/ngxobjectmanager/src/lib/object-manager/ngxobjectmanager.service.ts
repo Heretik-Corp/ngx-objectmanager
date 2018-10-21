@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { QueryParameters, RequestResult } from './models';
-import { toCamel } from './utils';
+import { QueryParameters, RequestResult } from '.';
+import { toCamel } from '../utils';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
