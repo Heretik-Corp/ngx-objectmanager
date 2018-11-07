@@ -2,7 +2,22 @@
 
 ## To Use
 1. Install the package
+```
+npm install --save ngx-objectmanager
+```
 2. Import the module 
+```
+@NgModule({
+...
+  imports: [
+    ...
+    NgxobjectmanagerModule.forRoot()
+    ...
+]
+...
+})
+export class AppModule { }
+```
 3. Constructor inject the service
 
 ## To Dev
