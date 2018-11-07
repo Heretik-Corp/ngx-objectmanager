@@ -3,7 +3,7 @@
 ## To Use
 1. Install the package
 ```
-npm install --save ngx-objectmanager
+npm install --save ngxobjectmanager
 ```
 2. Import the module 
 ```
