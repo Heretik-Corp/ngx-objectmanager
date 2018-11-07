@@ -21,7 +21,7 @@ export interface FieldDef {
     headerName: string;
     trueValue: string;
     falseValue: string;
-    fieldTypeId: number; //TODO
+    fieldTypeId: number; // TODO
     formatString: string;
     itemListType: ItemListType;
     isLinked: boolean;
