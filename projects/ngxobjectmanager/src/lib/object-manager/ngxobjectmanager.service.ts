@@ -15,6 +15,7 @@ export interface Data {
   previousPage: string;
   nextPage: string;
   dataResults: DataResult[];
+  window: number[];
 }
 
 export interface Permission {
@@ -92,6 +93,7 @@ export interface Query {
   fields: string[];
   condition: string;
   sorts: string[];
+  includeIdWindow: boolean;
 }
 
 
